@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <stlk_freeShipping>
+            <general>
+                <enable>0</enable>
+                <free_shipping_message>For free shipping missing: </free_shipping_message>
+                <free_shipping_reached_message>Free shipping reached. </free_shipping_reached_message>
+                <free_shipping_amount>100</free_shipping_amount>
+            </general>
+        </stlk_freeShipping>
+    </default>
+</config>

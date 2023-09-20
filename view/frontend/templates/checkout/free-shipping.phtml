@@ -1,0 +1,24 @@
+<?php
+declare(strict_types=1);
+
+/** @var Magento\Framework\View\Element\Template $block */
+/** @var Magento\Framework\Escaper $escaper */
+/** @var STLK\FreeShipping\ViewModel\FreeShippingViewModel $freeShippingViewModel */
+$freeShippingViewModel = $block->getData('free_shipping_vm');
+
+$freeShippingMessage = $freeShippingViewModel->getFreeShippingMessage();
+$freeShippingReachedMessage = $freeShippingViewModel->getFreeShippingReachedMessage();
+$freeShippingAmount = $freeShippingViewModel->getFreeShippingAmount();
+
+?>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "STLK_FreeShipping/js/set-free-shipping-data": {
+                "freeShippingMessage": "<?= $escaper->escapeJs($freeShippingMessage) ?>",
+                "freeShippingReachedMessage": "<?= $escaper->escapeJs($freeShippingReachedMessage) ?>",
+                "freeShippingAmount": "<?= $escaper->escapeJs($freeShippingAmount) ?>"
+            }
+        }
+    }
+</script>
